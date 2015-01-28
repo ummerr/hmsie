@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
-  has_secure_password
-  # Remember to create a migration!
+  has_many :goals
+  has_many :expenditures
+
+  has_secure_passwords
 end
