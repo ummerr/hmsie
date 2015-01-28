@@ -1,4 +1,8 @@
 /* CSS declarations go here */
+/** {
+  border: 1px solid blue;
+}*/
+
 body {
     font-family: Georgia;
     font-size: 160%;
@@ -11,6 +15,10 @@ body {
     max-width: 37em;
     position: relative;
     width: 61.8%;
+}
+
+img#logo {
+  width: 300px;
 }
 
 /*Landing Page Elements*/
