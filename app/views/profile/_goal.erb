@@ -1,3 +1,22 @@
 <div class='goal-weight'>
   <h3>Your goal weight is <%= @goal.goal_weight %> kilograms.</h3>
+  <h3>You burn approximately <%= @goal.goal_resting_expenditure %> with no activity at all.</h3>
+  <p>At your goal weight, you would burn the following amounts of calories at different activity levels.  To reach your goal weight, ensure to eat the following amount of calories daily:</p>
+  <table>
+    <tr>
+      <th>Sedentary</th>
+      <th>Lightly Active</th>
+      <th>Moderately Active</th>
+      <th>Very Active</th>
+      <th>Extra Active</th>
+    </tr>
+    <tr>
+      <td><%= @goal.sedentary %></td>
+      <td><%= @goal.light_active %></td>
+      <td><%= @goal.moderate_active %></td>
+      <td><%= @goal.very_active %></td>
+      <td><%= @goal.extra_active %></td>
+    </tr>
+  </table>
+
 </div>

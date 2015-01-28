@@ -1,19 +1,7 @@
 <div id='profile-container'>
   <h1>Hello <%= current_user.name %></h1>
 
-  <p>Let's get started with HMSIE! Please enter your goal weight below</p>
-
-  <form id="target-weight" action='/goal' method='POST'>
-    <h3>Target Weight</h3>
-    <div class='detail'>
-      Goal Weight (kg) <input type="text" name="goal[goal_weight]">
-      <input type='submit' name='Go!'>
-    </div>
-  </form>
-
-  <div id='goal-container'>
-
-  </div>
+  <p>Let's get started with HMSIE!</p>
 
   <form id="current-expenditure" action='/expenditure' method='POST'>
     <h3>Calculate your Daily Caloric Expenditure</h3>
@@ -22,7 +10,7 @@
       Female: <input type='radio' name='expenditure[gender]' value='female'>
     </div>
     <div class='detail'>
-      Your Age:<input type='text' name='expenditure[age]'>
+      Your Age:<input type='text' name='expenditure[age]' placeholder="<%= current_user.age %>">
     </div>
     <div class='detail'>
       Your Current Weight(kg):<input type='text' name='expenditure[weight]'>
@@ -37,6 +25,19 @@
   </form>
 
   <div id='expenditure-container'>
+
+  </div>
+
+  <form id="target-weight" action='/goal' method='POST'>
+    <h3>Target Weight</h3>
+    <p>Now let's figure out your goals.</p>
+    <div class='detail'>
+      Goal Weight (kg) <input type="text" name="goal[goal_weight]">
+      <input type='submit' name='Go!'>
+    </div>
+  </form>
+
+  <div id='goal-container'>
 
   </div>
 
