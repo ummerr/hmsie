@@ -15,4 +15,26 @@
 
   </div>
 
+  <form id="current-expenditure" action='/expenditure' method='POST'>
+    <h3>Calculate your Daily Caloric Expenditure</h3>
+    <div class='detail'>
+      Male: <input type='radio' name='expenditure[gender]' value='male'>
+      Female: <input type='radio' name='expenditure[gender]' value='female'>
+    </div>
+    <div class='detail'>
+      Your Age:<input type='text' name='expenditure[age]'>
+    </div>
+    <div class='detail'>
+      Your Current Weight(kg):<input type='text' name='expenditure[weight]'>
+    </div>
+    <div class='detail'>
+      Your Current Height(m):<input type='text' name='expenditure[height]'>
+    </div>
+    <div class='detail'>
+      <input type='submit'>
+    </div>
+
+  </form>
+
+
 </div>

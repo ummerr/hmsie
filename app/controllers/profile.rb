@@ -17,3 +17,16 @@ post '/goal' do
   end
 
 end
+
+post 'expenditure' do
+  @expenditure = Expenditure.create(params[:expenditure])
+  current_user.expenditures << @expenditure
+
+  if request.xhr?
+
+  else
+
+  end
+
+
+end
