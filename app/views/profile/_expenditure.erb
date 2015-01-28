@@ -1,3 +1,21 @@
 <div class='expenditure'>
-  <h3>You burn approximately <%= @expenditure.resting_expenditure %> while at rest.</h3>
+  <h3>You burn approximately <%= @expenditure.resting_expenditure %> with no activity at all.</h3>
+  <p>Based on your activity level, you burn the following amount of calories per day:</p>
+  <table>
+    <tr>
+      <th>Sedentary</th>
+      <th>Lightly Active</th>
+      <th>Moderately Active</th>
+      <th>Very Active</th>
+      <th>Extra Active</th>
+    </tr>
+    <tr>
+      <td><%= @expenditure.sedentary %></td>
+      <td><%= @expenditure.light_active %></td>
+      <td><%= @expenditure.moderate_active %></td>
+      <td><%= @expenditure.very_active %></td>
+      <td><%= @expenditure.extra_active %></td>
+    </tr>
+  </table>
+
 </div>
