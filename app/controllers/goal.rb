@@ -3,7 +3,7 @@ get '/goal' do
     @goals = current_user.goals
     erb :"/goal/goals"
   else
-
+    redirect '/'
   end
 
 end
