@@ -1,0 +1,26 @@
+<h1><%= current_user.name %>'s Past Goals</h1>
+
+<table>
+    <tr>
+      <th>Target Weight</th>
+      <th>At Rest</th>
+      <th>Sedentary</th>
+      <th>Lightly Active</th>
+      <th>Moderately Active</th>
+      <th>Very Active</th>
+      <th>Extra Active</th>
+      <th>Date of Goal</th>
+    </tr>
+    <% @goals.each do |goal| %>
+    <tr>
+      <td><%= goal.goal_weight %> kg</td>
+      <td><%= goal.goal_resting_expenditure %> cal</td>
+      <td><%= goal.sedentary %> cal</td>
+      <td><%= goal.light_active %> cal</td>
+      <td><%= goal.moderate_active %> cal</td>
+      <td><%= goal.very_active %> cal</td>
+      <td><%= goal.extra_active %> cal</td>
+      <td><%= goal.created_at %> cal</td>
+    </tr>
+    <% end %>
+  </table>
