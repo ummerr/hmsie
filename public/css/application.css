@@ -50,11 +50,17 @@ form#signup {
 }
 
 form#target-weight {
-
+ display: none;
 }
 
 form#current-expenditure {
-  display: none;
+
+}
+
+/* Goal Partial */
+
+#goal_weight {
+  padding-bottom: 2em;
 }
 
 /* Expenditure Partial */
