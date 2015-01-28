@@ -13,5 +13,41 @@
     </form>
   </div>
 
-
 </div>
+
+<form id='login' action='/login' method='POST'>
+  <h2>Login:</h2>
+  <div class='detail'>
+    Username: <input type="text" name="user[name]">
+  </div>
+  <div class='detail'>
+    Password: <input type="text" name="user[password]">
+  </div>
+  <div class='detail'>
+    <input type='submit'>
+  </div>
+</form>
+
+
+<form id='signup' action='/signup' method='POST'>
+  <h2>Signup:</h2>
+  <div class='detail'>
+    Username: <input type="text" name="user[name]">
+  </div>
+  <div class="detail">
+    Male: <input type='radio' name="user[gender]">
+    Female: <input type='radio' name="user[gender]">
+  </div>
+  <div class="detail">
+    Birthday: <input type="date" name="user[birthday]">
+  </div>
+  <div class='detail'>
+    Password: <input type="text" name="user[password]">
+  </div>
+  <div class="detail">
+    Confirm Password: <input type="text" name="user[password_confirmation]">
+  </div>
+  <div class='detail'>
+    <input type='submit'>
+  </div>
+</form>
