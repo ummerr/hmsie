@@ -24,8 +24,25 @@ $(document).ready(function() {
     }).done(function(response) {
       console.log(response);
       $('form#target-weight').hide();
-      $('#goal-container').append(response);
+      $('#goal-container').empty().append(response);
+      $("form#current-expenditure").toggle();
     });
   });
+
+  $('form#current-expenditure').submit(function(event) {
+    event.preventDefault();
+
+    $form = $(event.target)
+
+    $.ajax({
+      url: $form.attr('action'),
+      type: $form.attr('method'),
+      data: $form.serialize()
+    }).done(function(response) {
+      console.log(response);
+      $('form#current-expenditure').hide();
+      $('#expenditure-container').empty().append(response);
+    })
+  })
 
 });

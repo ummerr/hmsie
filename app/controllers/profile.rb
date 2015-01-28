@@ -18,14 +18,14 @@ post '/goal' do
 
 end
 
-post 'expenditure' do
+post '/expenditure' do
   @expenditure = Expenditure.create(params[:expenditure])
   current_user.expenditures << @expenditure
 
   if request.xhr?
-
+    erb :"/profile/_expenditure", layout: false
   else
-
+    redirect "/profile"
   end
 
 
