@@ -1,11 +1,23 @@
 class Goal < ActiveRecord::Base
   belongs_to :user
 
+  def height
+    (6.25 * self.user.expenditures.last.height.to_i)
+  end
+
+  def weight
+    (10 * self.goal_weight.to_i)
+  end
+
+  def age
+    (5 * self.user.expenditures.last.age.to_i)
+  end
+
   def goal_resting_expenditure
     if self.user.gender.downcase == 'male' || self.user.gender.downcase == 'm'
-      (10 * self.goal_weight.to_i) + (6.25 * self.user.expenditures.last.height.to_i) - (5 * self.user.expenditures.last.age.to_i) + 5
+      self.weight + self.height - self.age + 5
     else
-      (10 * self.goal_weight.to_i) + (6.25 * self.user.expenditures.last.height.to_i) - (5 * self.user.expenditures.last.age.to_i) - 161
+      self.weight + self.height - self.age - 161
     end
   end
 
