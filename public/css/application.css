@@ -16,27 +16,24 @@ body {
 /*Landing Page Elements*/
 
 #landing-page {
-
+  margin: 0 auto;
+  text-align: center;
 }
 
 #auth-buttons {
 
 }
 
-form#auth-login {
-
-}
-
-form#auth-signup {
-
-}
-
 form#login {
   display: none;
+  margin: 0 auto;
+  text-align: center;
 }
 
 form#signup {
   display: none;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .detail {
@@ -46,7 +43,7 @@ form#signup {
 /* Profile Page Elements */
 
 #profile-container {
-
+ padding: 2em;
 }
 
 form#target-weight {
