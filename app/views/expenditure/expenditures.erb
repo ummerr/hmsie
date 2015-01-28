@@ -1,0 +1,25 @@
+<h1><%= current_user.name %>'s Past Expenditures</h1>
+<table>
+    <tr>
+      <th>Target Weight</th>
+      <th>At Rest</th>
+      <th>Sedentary</th>
+      <th>Lightly Active</th>
+      <th>Moderately Active</th>
+      <th>Very Active</th>
+      <th>Extra Active</th>
+      <th>Date of Goal</th>
+    </tr>
+    <% @expenditures.each do |expenditure| %>
+    <tr>
+      <td><%= expenditure.weight %> kg</td>
+      <td><%= expenditure.resting_expenditure %> cal</td>
+      <td><%= expenditure.sedentary %> cal</td>
+      <td><%= expenditure.light_active %> cal</td>
+      <td><%= expenditure.moderate_active %> cal</td>
+      <td><%= expenditure.very_active %> cal</td>
+      <td><%= expenditure.extra_active %> cal</td>
+      <td><%= expenditure.created_at %> cal</td>
+    </tr>
+    <% end %>
+  </table>
