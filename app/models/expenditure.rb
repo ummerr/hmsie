@@ -3,23 +3,23 @@ class Expenditure < ActiveRecord::Base
   belongs_to :user
 
   def sedentary
-    (self.resting_expenditure * 1.2).to_i
+    (self.resting_expenditure.to_i * 1.2).to_i
   end
 
   def light_active
-    (self.resting_expenditure * 1.375).to_i
+    (self.resting_expenditure.to_i * 1.375).to_i
   end
 
   def moderate_active
-    (self.resting_expenditure * 1.55).to_i
+    (self.resting_expenditure.to_i * 1.55).to_i
   end
 
   def very_active
-    (self.resting_expenditure * 1.725).to_i
+    (self.resting_expenditure.to_i * 1.725).to_i
   end
 
   def extra_active
-    (self.resting_expenditure * 1.9).to_i
+    (self.resting_expenditure.to_i * 1.9).to_i
   end
 
   def calc_weight
