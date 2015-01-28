@@ -1,7 +1,7 @@
-<h1><%= current_user.name %>'s Past Expenditures</h1>
+<h1><%= current_user.name %>'s Past Caloric Expenditures</h1>
 <table>
     <tr>
-      <th>Target Weight</th>
+      <th>Current Weight</th>
       <th>At Rest</th>
       <th>Sedentary</th>
       <th>Lightly Active</th>
@@ -9,6 +9,7 @@
       <th>Very Active</th>
       <th>Extra Active</th>
       <th>Date of Goal</th>
+      <th>Delete?</th>
     </tr>
     <% @expenditures.each do |expenditure| %>
     <tr>
@@ -20,6 +21,12 @@
       <td><%= expenditure.very_active %> cal</td>
       <td><%= expenditure.extra_active %> cal</td>
       <td><%= expenditure.created_at %> cal</td>
+      <td>
+        <form action="/expenditure/<%= expenditure.id %>" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Delete">
+        </form>
+      </td>
     </tr>
     <% end %>
   </table>

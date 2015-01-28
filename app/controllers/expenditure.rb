@@ -19,3 +19,9 @@ post '/expenditure' do
   end
 
 end
+
+delete '/expenditure/:id' do |id|
+  @expenditure = Expenditure.find(id)
+  @expenditure.destroy
+  redirect '/expenditure'
+end
