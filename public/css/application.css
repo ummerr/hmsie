@@ -30,3 +30,15 @@ form#auth-login {
 form#auth-signup {
 
 }
+
+form#login {
+  display: none;
+}
+
+form#signup {
+  display: none;
+}
+
+.detail {
+
+}
