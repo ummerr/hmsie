@@ -1,4 +1,8 @@
 /* CSS declarations go here */
+/** {
+  border: 1px solid blue;
+}*/
+
 body {
     font-family: Georgia;
     font-size: 160%;
@@ -7,10 +11,14 @@ body {
 
 #content {
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 2em;
     max-width: 37em;
     position: relative;
-    width: 61.8%;
+    width: 61%;
+}
+
+img#logo {
+  width: 300px;
 }
 
 /*Landing Page Elements*/
@@ -20,8 +28,16 @@ body {
   text-align: center;
 }
 
+#landing-page h1 {
+  font-family: Futura;
+}
+
 #auth-buttons {
 
+}
+
+form {
+  font-family: Futura;
 }
 
 form#login {
@@ -37,7 +53,7 @@ form#signup {
 }
 
 .detail {
-
+  padding: 0.5em;
 }
 
 /* Profile Page Elements */
