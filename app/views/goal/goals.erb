@@ -1,4 +1,4 @@
-<h1><%= current_user.name %>'s Past Goals</h1>
+<h1><%= current_user.name %>'s Past Caloric Goals</h1>
 <table>
     <tr>
       <th>Target Weight</th>
@@ -9,6 +9,7 @@
       <th>Very Active</th>
       <th>Extra Active</th>
       <th>Date of Goal</th>
+      <th>Delete?</th>
     </tr>
     <% @goals.each do |goal| %>
     <tr>
@@ -20,6 +21,12 @@
       <td><%= goal.very_active %> cal</td>
       <td><%= goal.extra_active %> cal</td>
       <td><%= goal.created_at %> cal</td>
+      <td>
+        <form action="/goal/<%= goal.id %>" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Delete">
+        </form>
+      </td>
     </tr>
     <% end %>
   </table>

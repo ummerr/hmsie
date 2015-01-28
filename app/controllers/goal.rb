@@ -1,4 +1,4 @@
-get '/goal' do
+get '/goal/?' do
   if current_user
     @goals = current_user.goals
     erb :"/goal/goals"
@@ -18,4 +18,10 @@ post '/goal' do
     redirect "/profile"
   end
 
+end
+
+delete '/goal/:id' do |id|
+  @goal = Goal.find(id)
+  @goal.destroy
+  redirect '/goal'
 end
