@@ -1,1 +1,14 @@
-I LIKE ROUTES!
+<div id='profile-container'>
+  <h1>Hello <%= current_user.name %></h1>
+
+  <p>Let's get started with HMSIE! Please enter your goal weight below</p>
+
+  <form id="target-weight" action='/goal' method='POST'>
+    <h3>Target Weight</h3>
+    <div class='detail'>
+      Goal Weight (kg) <input type="text" name="goal[goal_weight]">
+      <input type='submit' name='Go!'>
+    </div>
+  </form>
+
+</div>
