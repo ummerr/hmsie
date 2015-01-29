@@ -1,30 +1,21 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+Welcome to How Much Should I Eat? (HMSIE)
 
-### Purpose
-The Sinatra Skeleton:
+To Run:
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+Navigate to your terminal:
 
-### Quickstart
+type 'bundle install'
+type 'bundle exec rake db:drop' (to drop an old db if it exists)
+type 'bundle exec rake db:create' (to create a new db)
+type 'bundle exec rake db:migrate' (migrates the db)
+Open your browser and type 'http://localhost:9393/'
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+Resting Caloric levels are calculated using the [Basal Metabolic Rate](http://en.wikipedia.org/wiki/Basal_metabolic_rate).
 
-As needed, create models & migrations with the `rake` tasks:
+Caloric levels with activity are calculated using the [Harris-Benedict Equation](http://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation) formula.
 
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
+##Future features/refactoring to include:
 
-### Contributing
-
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!
+* Ability to track a goal against a current weight (caloric expenditure)
+* Redo database schema
+* Add a visualization of progress (via a charting library)
