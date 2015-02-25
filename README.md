@@ -2,7 +2,7 @@ Welcome to How Much Should I Eat? (HMSIE)
 
 To Run:
 
-#Navigate to your terminal:
+###Navigate to your terminal:
 
 1. type 'bundle install'
 2. type 'bundle exec rake db:drop' (to drop an old db if it exists)
@@ -14,7 +14,7 @@ Resting Caloric levels are calculated using the [Basal Metabolic Rate](http://en
 
 Caloric levels with activity are calculated using the [Harris-Benedict Equation](http://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation) formula.
 
-##Future features/refactoring to include:
+###Future features/refactoring to include:
 
 * Ability to track a goal against a current weight (caloric expenditure)
 * Redo database schema

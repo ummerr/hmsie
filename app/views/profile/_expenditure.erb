@@ -2,6 +2,7 @@
   <h3>Your current weight is <%= @expenditure.weight %> kilograms</h3>
   <h3>You burn approximately <%= @expenditure.resting_expenditure %> calories with no activity at all.</h3>
   <p>Based on your activity level, you burn the following amount of calories per day:</p>
+
   <table>
     <tr>
       <th>Sedentary</th>
@@ -18,4 +19,5 @@
       <td><%= @expenditure.extra_active %></td>
     </tr>
   </table>
+
 </div>
